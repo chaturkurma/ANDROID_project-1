@@ -10,12 +10,14 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
+    private Button BTN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         TextView tv = (TextView) findViewById(R.id.univ1);
         TextView tv1 = (TextView) findViewById(R.id.univ2);
+        BTN = (Button) findViewById(R.id.BTNnext);
 
 
         tv.setOnClickListener(new View.OnClickListener() {
@@ -42,5 +44,16 @@ public class SecondActivity extends AppCompatActivity {
 
         });
 
+        BTN.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent ini = new Intent(SecondActivity.this, feedback.class);
+                startActivity(ini);
+
+
+            }
+        });
     }
-}
+    }
