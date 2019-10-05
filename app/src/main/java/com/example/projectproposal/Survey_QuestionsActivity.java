@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Survey_questions extends AppCompatActivity {
+public class Survey_QuestionsActivity extends AppCompatActivity {
 
     private TextView ques1;
     private TextView ques2;
@@ -30,7 +30,7 @@ public class Survey_questions extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent ini = new Intent(Survey_questions.this,SecondActivity.class);
+                Intent ini = new Intent(Survey_QuestionsActivity.this,SecondActivity.class);
                 startActivity(ini);
 
             }
