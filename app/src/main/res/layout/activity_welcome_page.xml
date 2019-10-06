@@ -4,42 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feedback">
+    tools:context=".WelcomePage">
 
     <TextView
-        android:id="@+id/BTN4"
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Feedback"
-        android:textSize="36sp"
+        android:text="Welcome to the App. here you can select the universities by your preferences"
+        android:textAlignment="viewStart"
+        android:textColor="#E44C1C"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
-
-    <TextView
-        android:id="@+id/BTN5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rating"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338" />
+        app:layout_constraintVertical_bias="0.223" />
 
     <Button
-        android:id="@+id/FinishBTN"
+        android:id="@+id/Adminlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Finish"
-        android:textSize="30sp"
+        android:text="Admin Login"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537" />
+        app:layout_constraintVertical_bias="0.518" />
+
+    <Button
+        android:id="@+id/Studentlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Login"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
