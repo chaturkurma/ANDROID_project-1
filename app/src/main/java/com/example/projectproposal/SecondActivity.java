@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class SecondActivity extends AppCompatActivity {
 
     private Button BTN;
+    private TextView tit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,7 @@ public class SecondActivity extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.univ1);
         TextView tv1 = (TextView) findViewById(R.id.univ2);
         BTN = (Button) findViewById(R.id.BTNnext);
+        TextView tit = (TextView)findViewById(R.id.titleUniv);
 
 
         tv.setOnClickListener(new View.OnClickListener() {
