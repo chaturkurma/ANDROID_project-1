@@ -40,7 +40,7 @@ private Button btn3;
             @Override
             public void onClick(View view) {
 
-                Intent ini = new Intent(Survey_Page.this,MainActivity.class);
+                Intent ini = new Intent(Survey_Page.this,WelcomePage.class);
                 startActivity(ini);
 
             }

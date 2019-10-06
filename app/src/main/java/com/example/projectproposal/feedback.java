@@ -26,7 +26,7 @@ public class feedback extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent ini = new Intent(feedback.this,MainActivity.class);
+                Intent ini = new Intent(feedback.this,WelcomePage.class);
                 startActivity(ini);
 
             }
