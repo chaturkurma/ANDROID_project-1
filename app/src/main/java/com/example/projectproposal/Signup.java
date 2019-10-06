@@ -23,15 +23,13 @@ public class Signup extends AppCompatActivity {
     private EditText d;
     private EditText e;
     private EditText f;
-    private Button BTY;
+    private Button BT;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
-
 
         TextView Title = (TextView) findViewById(R.id.title);
         TextView fName = (TextView) findViewById(R.id.Fname);
@@ -47,9 +45,9 @@ public class Signup extends AppCompatActivity {
         EditText d = (EditText) findViewById((R.id.B4));
         EditText e = (EditText) findViewById((R.id.B5));
         EditText f = (EditText) findViewById((R.id.B6));
-        BTY = (Button) findViewById(R.id.BTN5);
+        BT = (Button)findViewById(R.id.BTN5);
 
-        BTY.setOnClickListener(new View.OnClickListener() {
+        BT.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -59,6 +57,7 @@ public class Signup extends AppCompatActivity {
 
             }
         });
+
 
 
 
