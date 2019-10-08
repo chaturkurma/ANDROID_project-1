@@ -16,6 +16,7 @@ public class WelcomePage extends AppCompatActivity {
     private Button but;
     private TextView title;
     private Button but1;
+    private Button but2;
 
 
 
@@ -30,6 +31,7 @@ public class WelcomePage extends AppCompatActivity {
         but = (Button) findViewById(R.id.button);
         TextView title = (TextView) findViewById(R.id.Title);
         but1 = (Button) findViewById(R.id.New);
+        but2 = (Button) findViewById(R.id.Fpassword);
 
         but.setOnClickListener(new View.OnClickListener() {
 
@@ -47,6 +49,16 @@ public class WelcomePage extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent ini = new Intent(WelcomePage.this,Signup.class);
+                startActivity(ini);
+
+            }
+        });
+        but2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent ini = new Intent(WelcomePage.this,ForgotPassword.class);
                 startActivity(ini);
 
             }
