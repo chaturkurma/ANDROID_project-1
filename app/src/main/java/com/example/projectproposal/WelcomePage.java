@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 public class WelcomePage extends AppCompatActivity {
     private EditText Name;
+
+
     private EditText password;
     private TextView info;
     private Button but;
