@@ -4,24 +4,10 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
+    android:background="@drawable/welcome"
 tools:context=".MainActivity">
 
-<TextView
-    android:id="@+id/welcome"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Welcome to the App. here you can select the universities by your preferences"
-    android:textAlignment="viewStart"
-    android:textColor="#E44C1C"
-    android:textSize="24sp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="1.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.223" />
-
-<Button
+    <Button
     android:id="@+id/Adminlogin"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
