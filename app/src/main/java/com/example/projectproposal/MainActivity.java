@@ -13,8 +13,6 @@ package com.example.projectproposal;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private TextView w1;
     private Button By;
     private Button By1;
 
@@ -22,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main );
-
-        TextView w1 = (TextView) findViewById(R.id.welcome);
+        
         By = (Button) findViewById(R.id.Adminlogin);
         By1 = (Button) findViewById(R.id.Studentlogin);
 
