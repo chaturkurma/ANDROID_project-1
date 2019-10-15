@@ -40,7 +40,3 @@ Username, password, Student Preference
 ## Activity Flow Diagram:
 
 - ![Hosted image](https://github.com/karthikmuthyala/ANDROID_project/blob/master/hdfc.jpg)
-
-
-
-
