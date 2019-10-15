@@ -14,7 +14,7 @@
 3) Rajesh - Works with User Interface functionality
 4) Karthik Reddy Muthyala - works with User Interface FrontEnd
 
-# project Description :
+# Project Description :
 ## Activities:
 
 
