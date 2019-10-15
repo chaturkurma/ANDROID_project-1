@@ -34,6 +34,10 @@ The project college selector system is an application where students can search 
 ## Persists on the app:   
 Username, password, Student Preference
 
+## Activity Flow Diagram:
+
+- ![Hosted image](https://github.com/karthikmuthyala/ANDROID_project/blob/master/hdfc.jpg)
+
 
 
 
