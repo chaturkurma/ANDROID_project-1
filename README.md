@@ -31,6 +31,9 @@ The project college selector system is an application where students can search 
 1.	Student feedback form: Student can also give their reviews about this system by filling up a feedback form in system.
 
 
+## Functionality: 
+We use the database to store the values entered by students.
+
 ## Persists on the app:   
 Username, password, Student Preference
 
