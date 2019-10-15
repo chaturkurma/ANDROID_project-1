@@ -41,13 +41,3 @@ Username, password, Student Preference
 
 
 
-
-
-
-
-# supported Version:
-
-
-# Installation Steps :
-
-
