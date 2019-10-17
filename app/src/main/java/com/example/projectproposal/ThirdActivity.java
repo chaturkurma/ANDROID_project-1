@@ -2,13 +2,56 @@ package com.example.projectproposal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity {
+    private TextView txt;
+    private TextView t1;
+    private TextView t2;
+    private TextView t3;
+    private TextView t4;
+    private TextView t5;
+    private TextView w1;
+    private TextView w2;
+    private TextView w3;
+    private TextView w4;
+    private TextView w5;
+    private Button BTN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);   
+        setContentView(R.layout.activity_third);
+        TextView t1=(TextView) findViewById(R.id.univName);
+        TextView t2=(TextView) findViewById(R.id.univLoc);
+        TextView t3=(TextView) findViewById(R.id.gradRate);
+        TextView t4=(TextView) findViewById(R.id.ReqScore);
+        TextView t5=(TextView) findViewById(R.id.score2);
+        TextView txt=(TextView) findViewById(R.id.textView7);
+        TextView w1=(TextView) findViewById(R.id.textView2);
+        TextView w2=(TextView) findViewById(R.id.textView4);
+        TextView w3=(TextView) findViewById(R.id.textView6);
+        TextView w4=(TextView) findViewById(R.id.textView);
+        TextView w5=(TextView) findViewById(R.id.textView3);
+        BTN = (Button)findViewById(R.id.button2);
+
+        BTN.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent ini = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.nwmissouri.edu/admissions/"));
+                startActivity(ini);
+
+            }
+        });
+
+
     }
 }
