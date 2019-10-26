@@ -9,9 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Signup extends AppCompatActivity {
     private TextView Title;
-    private TextView fname;
+    private TextView f1;
     private TextView lname;
     private TextView email;
     private TextView contact;
@@ -31,35 +34,89 @@ public class Signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        TextView Title = (TextView) findViewById(R.id.title);
-        TextView fName = (TextView) findViewById(R.id.Fname);
-        TextView lname = (TextView) findViewById(R.id.Lname);
-        TextView email = (TextView) findViewById(R.id.Email);
-        TextView contact = (TextView) findViewById(R.id.Contact);
-        TextView password = (TextView) findViewById(R.id.Password);
-        TextView confPassword = (TextView) findViewById(R.id.ConfirmPassword);
+        Title = (TextView) findViewById(R.id.title);
+        f1 = (TextView) findViewById(R.id.Fname);
+        lname = (TextView) findViewById(R.id.Lname);
+        email = (TextView) findViewById(R.id.Email);
+        contact = (TextView) findViewById(R.id.Contact);
+        password = (TextView) findViewById(R.id.Password);
+        confPassword = (TextView) findViewById(R.id.ConfirmPassword);
 
-        EditText a = (EditText) findViewById((R.id.B1));
-        EditText b = (EditText) findViewById((R.id.B2));
-        EditText c = (EditText) findViewById((R.id.B3));
-        EditText d = (EditText) findViewById((R.id.B4));
-        EditText e = (EditText) findViewById((R.id.B5));
-        EditText f = (EditText) findViewById((R.id.B6));
+        a = (EditText) findViewById((R.id.B1));
+        b = (EditText) findViewById((R.id.B2));
+        c = (EditText) findViewById((R.id.B3));
+        d = (EditText) findViewById((R.id.B4));
+        e = (EditText) findViewById((R.id.B5));
+        f = (EditText) findViewById((R.id.B6));
         BT = (Button)findViewById(R.id.BTN5);
 
-        BT.setOnClickListener(new View.OnClickListener() {
+    }
 
-            @Override
-            public void onClick(View view) {
+    public void gotoSuccessfulSignUpActivityAction(View v) {
+        //Fullname Field validation
+        final String fName=f1.getText().toString();
+        final String mobNum=contact.getText().toString();
+        final String user=lname.getText().toString();
+        final String p=password.getText().toString();
+        final String Cpass=confPassword.getText().toString();
+        if(fName.length()==0){
+            f1.requestFocus();
+            f1.setError("Name field cannot be empty!!");
+        }
+        else if(!fName.matches("[a-zA-Z ]+"))
+        {
+            f1.requestFocus();
+            f1.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+        }
+        //Mobile Number validation
 
-                Intent ini = new Intent(Signup.this,WelcomePage.class);
-                startActivity(ini);
+        else if(mobNum.length()==0|| mobNum.length()>11){
+            contact.requestFocus();
+            contact.setError("Mobile Field is Empty/ too Long");
+        }
+        else if (!Pattern.matches("[0-9]+",mobNum)){
+            contact.setError("Mobile Field should contain only numerical values");
+        }
+
+        //UserId validation
+
+        else if(user.length()==0){
+            lname.requestFocus();
+            lname.setError("Name field cannot be empty!!");
+        }
+
+        //Password validation
+        else if(p.length()<8&&!isValidPassword(p)){
+            password.requestFocus();
+            password.setError("Enter Valid Password with atleast 1 capital letter, 1 small letter, 1 number and a symbol");
+        }
+
+        //Confirm Password Validation
+        else if(!(Cpass.equals(p))){
+            confPassword.requestFocus();
+            confPassword.setError("Password and Confirm Password does not match");
+        }
+
+        else {
+            try {
+                Intent toOtherIntent = new Intent(this, WelcomePage.class);
+                startActivity(toOtherIntent);
+
+            } catch (Exception e) {
 
             }
-        });
+        }
+    }
+    public static boolean isValidPassword(final String password) {
 
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
 
-
+        return matcher.matches();
 
     }
-}
+
+    }
