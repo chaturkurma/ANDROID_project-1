@@ -2,74 +2,69 @@ package com.example.projectproposal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TextView;
 
-import com.parse.LogInCallback;
-import com.parse.ParseException;
-import com.parse.ParseUser;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class adminlogin extends AppCompatActivity {
+    private EditText Name;
+    private EditText password;
+    private TextView info;
 
-    EditText edEmail, edPassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        edEmail = findViewById(R.id.edEmail);
-        edPassword = findViewById(R.id.edPassword);
-
-        if(ParseUser.getCurrentUser()!=null){
-            Intent intent = new Intent(adminlogin.this, WelcomePage.class);
-            startActivity(intent);
-            finish();
-        }
+        setContentView(R.layout.activity_adminlogin);
+        Name =  findViewById(R.id.name);
+        password =  findViewById((R.id.Password));
+       
     }
 
-    public void login(View view) {
-        if( TextUtils.isEmpty(edEmail.getText())){
-            edEmail.setError( "Email is required!" );
-        }else if( TextUtils.isEmpty(edPassword.getText())){
-            edPassword.setError( "Password is required!" );
-        }else{
-            final ProgressDialog progress = new ProgressDialog(this);
-            progress.setMessage("Loading ...");
-            progress.show();
-            ParseUser.logInInBackground(edEmail.getText().toString(), edPassword.getText().toString() , new LogInCallback() {
-                @Override
-                public void done(ParseUser parseUser, ParseException e) {
-                    progress.dismiss();
-                    if (parseUser != null) {
-                        Toast.makeText(adminlogin.this, "Welcome back!", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(adminlogin.this, WelcomePage.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        ParseUser.logOut();
-                        Toast.makeText(adminlogin.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
+    public void gotoSignInAction(View v) {
+        final String user=Name.getText().toString();
+        final String p=password.getText().toString();
+        if(user.length()==0){
+            Name.requestFocus();
+            Name.setError("Name field cannot be empty!!");
+        }
+        else if(p.length()<8&&!isValidPassword(p)){
+            password.requestFocus();
+            password.setError("Enter Valid Password with atleast 1 capital letter, 1 small letter, 1 number and a symbol");
+        }
+        else {
+            try {
+                Intent toOtherIntent = new Intent(this, SecondActivity.class);
+                startActivity(toOtherIntent);
+
+            } catch (Exception e) {
+            }
         }
 
+
+    }
+    public static boolean isValidPassword(final String password) {
+
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+        return matcher.matches();
+
     }
 
-    public void signup(View view) {
-        Intent intent = new Intent(adminlogin.this, Signup.class);
-        startActivity(intent);
-    }
 
-    public void forgotPassword(View view) {
-        Intent intent = new Intent(adminlogin.this, ForgotPassword.class);
-        startActivity(intent);
-    }
 
-}
+
+
+
+    }
 
