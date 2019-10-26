@@ -1,65 +1,67 @@
 package com.example.projectproposal;
-
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 public class Signup extends AppCompatActivity {
-    private TextView Title;
-    private TextView fname;
-    private TextView lname;
-    private TextView email;
-    private TextView contact;
-    private TextView password;
-    private TextView confPassword;
-    private EditText a;
-    private EditText b;
-    private EditText c;
-    private EditText d;
-    private EditText e;
-    private EditText f;
-    private Button BT;
 
-
+    EditText edName, edEmail, edPassword, edConfirmPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        TextView Title = (TextView) findViewById(R.id.title);
-        TextView fName = (TextView) findViewById(R.id.Fname);
-        TextView lname = (TextView) findViewById(R.id.Lname);
-        TextView email = (TextView) findViewById(R.id.Email);
-        TextView contact = (TextView) findViewById(R.id.Contact);
-        TextView password = (TextView) findViewById(R.id.Password);
-        TextView confPassword = (TextView) findViewById(R.id.ConfirmPassword);
+        edName = findViewById(R.id.edName);
+        edEmail = findViewById(R.id.edEmail);
+        edPassword = findViewById(R.id.edPassword);
+        edConfirmPassword = findViewById(R.id.edConfirmPassword);
+    }
 
-        EditText a = (EditText) findViewById((R.id.B1));
-        EditText b = (EditText) findViewById((R.id.B2));
-        EditText c = (EditText) findViewById((R.id.B3));
-        EditText d = (EditText) findViewById((R.id.B4));
-        EditText e = (EditText) findViewById((R.id.B5));
-        EditText f = (EditText) findViewById((R.id.B6));
-        BT = (Button)findViewById(R.id.BTN5);
+    public void signup(View view) {
+        if( TextUtils.isEmpty(edName.getText())){
+            edName.setError( "Name is required!" );
+        }else if( TextUtils.isEmpty(edEmail.getText())){
+            edEmail.setError( "Email is required!" );
+        }else if( TextUtils.isEmpty(edPassword.getText())){
+            edPassword.setError( "Password is required!" );
+        }else if( TextUtils.isEmpty(edConfirmPassword.getText())){
+            edConfirmPassword.setError( "Confirm password is required!" );
+        }else if(!edPassword.getText().toString().equals(edConfirmPassword.getText().toString())){
+            Toast.makeText(Signup.this, "Passwords are not the same!", Toast.LENGTH_LONG).show();
+        }
+        else{
 
-        BT.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-                Intent ini = new Intent(Signup.this,WelcomePage.class);
-                startActivity(ini);
-
-            }
-        });
-
-
-
-
+            final ProgressDialog progress = new ProgressDialog(this);
+            progress.setMessage("Loading ...");
+            progress.show();
+            ParseUser user = new ParseUser();
+            user.setUsername(edEmail.getText().toString().trim());
+            user.setEmail(edEmail.getText().toString().trim());
+            user.setPassword(edPassword.getText().toString());
+            user.put("name", edName.getText().toString().trim());
+            user.signUpInBackground(new SignUpCallback() {
+                @Override
+                public void done(ParseException e) {
+                    progress.dismiss();
+                    if (e == null) {
+                        Toast.makeText(Signup.this, "Welcome!", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(Signup.this, WelcomePage.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        ParseUser.logOut();
+                        Toast.makeText(Signup.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+        }
     }
 }
