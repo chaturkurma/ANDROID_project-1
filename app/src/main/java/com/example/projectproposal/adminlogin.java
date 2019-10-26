@@ -18,14 +18,14 @@ public class adminlogin extends AppCompatActivity {
     private Button but1;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminlogin);
 
-        EditText Name = (EditText) findViewById(R.id    .name);
+        EditText Name = (EditText) findViewById(R.id.name);
         EditText password = (EditText) findViewById((R.id.Password));
+
         //TextView info = (TextView) findViewById(R.id.textView);
         but = (Button) findViewById(R.id.button);
         TextView title = (TextView) findViewById(R.id.Title);
@@ -36,7 +36,7 @@ public class adminlogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent ini = new Intent(adminlogin.this,SecondActivity.class);
+                Intent ini = new Intent(adminlogin.this, SecondActivity.class);
                 startActivity(ini);
 
             }
@@ -46,14 +46,23 @@ public class adminlogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent ini = new Intent(adminlogin.this,ForgotPassword.class);
+                Intent ini = new Intent(adminlogin.this, ForgotPassword.class);
                 startActivity(ini);
 
             }
         });
 
+        
+    }
+    private void validate (String Name, String password){
+        if((Name=="Android")&&(password=="chatur")){
+            Intent ini = new Intent(adminlogin.this, SecondActivity.class);
+        }
+
 
     }
+
+
 
 
 }
