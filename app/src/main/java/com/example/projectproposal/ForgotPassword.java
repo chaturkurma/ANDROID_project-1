@@ -2,15 +2,11 @@ package com.example.projectproposal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.RequestPasswordResetCallback;
@@ -23,8 +19,8 @@ public class ForgotPassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
         edEmail = findViewById(R.id.edEmail);
-
-        public void resetPassword (View view)
+    }
+        public void forgotpassword(View view)
         {
             if (TextUtils.isEmpty(edEmail.getText())) {
                 edEmail.setError("Email is required!");
@@ -43,4 +39,3 @@ public class ForgotPassword extends AppCompatActivity {
             }
         }
     }
-}
