@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projectproposal">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppTheme">
     <meta-data
         android:name="com.parse.SERVER_URL"
         android:value="@string/back4app_server_url" />
@@ -16,16 +18,13 @@
         android:value="@string/back4app_app_id" />
     <meta-data
         android:name="com.parse.CLIENT_KEY"
-        android:value="@string/back4app_client_key" />>
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-        <uses-permission android:name="android.permission.INTERNET"/>
+        android:value="@string/back4app_client_key" />
+
         <activity android:name=".ForgotPassword" />
         <activity android:name=".adminlogin" />
         <activity android:name=".WelcomePage" />
         <activity android:name=".Signup" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
+
         <activity android:name=".feedback" />
         <activity android:name=".Survey_questions" />
         <activity android:name=".Survey_Page" />
