@@ -28,6 +28,7 @@ public class Signup extends AppCompatActivity {
     private TextView contact;
     private TextView password;
     private TextView confPassword;
+    EditText emailET, passwordET, contactET, confirmPasswordET, fnameET, lnameET;
     private EditText a;
     private EditText b;
     private EditText c;
@@ -50,37 +51,37 @@ public class Signup extends AppCompatActivity {
         password = (TextView) findViewById(R.id.Password);
         confPassword = (TextView) findViewById(R.id.ConfirmPassword);
 
-        a = (EditText) findViewById((R.id.B1));
-        b = (EditText) findViewById((R.id.B2));
-        c = (EditText) findViewById((R.id.B3));
-        d = (EditText) findViewById((R.id.B4));
-        e = (EditText) findViewById((R.id.B5));
-        f = (EditText) findViewById((R.id.B6));
+        fnameET = (EditText) findViewById((R.id.fnameET));
+        lnameET = (EditText) findViewById((R.id.lnameET));
+        emailET = (EditText) findViewById((R.id.emailET));
+        passwordET = (EditText) findViewById((R.id.passwordET));
+        contactET = (EditText) findViewById((R.id.contactET));
+        confirmPasswordET = (EditText) findViewById((R.id.confirmPasswordET));
         BT = (Button)findViewById(R.id.BTN5);
 
     }
 
     public void gotoSuccessfulSignUpActivityAction(View v) {
         //Fullname Field validation
-        final String fName=f1.getText().toString();
-        final String mobNum=contact.getText().toString();
-        final String user=lname.getText().toString();
-        final String p=password.getText().toString();
-        final String Cpass=confPassword.getText().toString();
+        final String fName=fnameET.getText().toString();
+        final String mobNum=contactET.getText().toString();
+        final String user=lnameET.getText().toString();
+        final String p=passwordET.getText().toString();
+        final String Cpass=confirmPasswordET.getText().toString();
         if(fName.length()==0){
-            f1.requestFocus();
-            f1.setError("Name field cannot be empty!!");
+            fnameET.requestFocus();
+            fnameET.setError("Name field cannot be empty!!");
         }
         else if(!fName.matches("[a-zA-Z ]+"))
         {
-            f1.requestFocus();
-            f1.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+            fnameET.requestFocus();
+            fnameET.setError("ENTER ONLY ALPHABETICAL CHARACTER");
         }
         //Mobile Number validation
 
         else if(mobNum.length()==0|| mobNum.length()>11){
-            contact.requestFocus();
-            contact.setError("Mobile Field is Empty/ too Long");
+            contactET.requestFocus();
+            contactET.setError("Mobile Field is Empty/ too Long");
         }
 //        else if (!Pattern.matches("[0-9]+",mobNum)){
 //            contact.setError("Mobile Field should contain only numerical values");
@@ -89,27 +90,27 @@ public class Signup extends AppCompatActivity {
         //UserId validation
 
         else if(user.length()==0){
-            lname.requestFocus();
-            lname.setError("Name field cannot be empty!!");
+            lnameET.requestFocus();
+            lnameET.setError("Name field cannot be empty!!");
         }
 
         //Password validation
         else if(p.length()<8&&!isValidPassword(p)){
-            password.requestFocus();
-            password.setError("Enter Valid Password with atleast 1 capital letter, 1 small letter, 1 number and a symbol");
+            passwordET.requestFocus();
+            passwordET.setError("Enter Valid Password with atleast 1 capital letter, 1 small letter, 1 number and a symbol");
         }
 
         //Confirm Password Validation
         else if(!(Cpass.equals(p))){
-            confPassword.requestFocus();
-            confPassword.setError("Password and Confirm Password does not match");
+            confirmPasswordET.requestFocus();
+            confirmPasswordET.setError("Password and Confirm Password does not match");
         }
 
         else {
             ParseUser userSignup = new ParseUser();
-            userSignup.setUsername(email.getText().toString().trim());
-            userSignup.setEmail(email.getText().toString().trim());
-            userSignup.setPassword(password.getText().toString());
+            userSignup.setUsername(emailET.getText().toString().trim());
+            userSignup.setEmail(emailET.getText().toString().trim());
+            userSignup.setPassword(passwordET.getText().toString());
             userSignup.signUpInBackground(new SignUpCallback() {
                 @Override
                 public void done(ParseException e) {
@@ -128,7 +129,7 @@ public class Signup extends AppCompatActivity {
                                         startActivity(toOtherIntent);
 
                                     } catch (Exception ex) {
-
+                                        System.out.println(ex);
                                     }
 
                                 } else {

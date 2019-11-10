@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <EditText
-        android:id="@+id/B1"
+        android:id="@+id/fnameET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.246" />
 
     <EditText
-        android:id="@+id/B2"
+        android:id="@+id/lnameET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -96,7 +96,7 @@
         app:layout_constraintVertical_bias="0.349" />
 
     <EditText
-        android:id="@+id/B3"
+        android:id="@+id/emailET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -126,7 +126,7 @@
         app:layout_constraintVertical_bias="0.45" />
 
     <EditText
-        android:id="@+id/B4"
+        android:id="@+id/contactET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -185,7 +185,7 @@
         app:layout_constraintVertical_bias="0.856" />
 
     <EditText
-        android:id="@+id/B5"
+        android:id="@+id/passwordET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -198,7 +198,7 @@
         app:layout_constraintVertical_bias="0.618" />
 
    <EditText
-        android:id="@+id/B6"
+        android:id="@+id/confirmPasswordET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
