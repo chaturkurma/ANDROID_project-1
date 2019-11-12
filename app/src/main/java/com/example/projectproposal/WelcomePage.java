@@ -64,6 +64,19 @@ public class WelcomePage extends AppCompatActivity {
             }
         });
 
+        
+
+        but1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+              Intent ini = new Intent(WelcomePage.this,Signup.class);
+            startActivity(ini);
+
+            }
+            });
+
 
     }
 
