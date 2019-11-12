@@ -16,6 +16,7 @@ public class adminlogin extends AppCompatActivity {
     private EditText Name;
     private EditText password;
     private TextView info;
+    private Button B1;
 
 
 
@@ -25,6 +26,7 @@ public class adminlogin extends AppCompatActivity {
         setContentView(R.layout.activity_adminlogin);
         Name =  findViewById(R.id.name);
         password =  findViewById((R.id.Password));
+        B1 = findViewById(R.id.BTN6);
        
     }
 
@@ -47,9 +49,20 @@ public class adminlogin extends AppCompatActivity {
             } catch (Exception e) {
             }
         }
+        B1.setOnClickListener(new View.OnClickListener() {
+
+               @Override
+             public void onClick(View view) {
+
+               Intent ini = new Intent(adminlogin.this,ForgotPassword.class);
+             startActivity(ini);
+
+            }
+            });
 
 
-    }
+
+        }
     public static boolean isValidPassword(final String password) {
 
         Pattern pattern;
