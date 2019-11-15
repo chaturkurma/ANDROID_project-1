@@ -3,17 +3,24 @@ package com.example.projectproposal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WelcomePage extends AppCompatActivity {
-    private EditText Name;
+    private EditText id;
     private EditText password;
     private TextView info;
     private Button but;
@@ -27,7 +34,7 @@ public class WelcomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_page);
 
-        Name =findViewById(R.id.name);
+        id =findViewById(R.id.name);
         password = findViewById((R.id.Password));
         //TextView info = (TextView) findViewById(R.id.textView);
         but =findViewById(R.id.button);
@@ -37,21 +44,33 @@ public class WelcomePage extends AppCompatActivity {
     }
 
     public void gotoSignInAction(View v) {
-        final String user = Name.getText().toString();
-        final String p = password.getText().toString();
+         String user = id.getText().toString();
+         String p = password.getText().toString();
         if (user.length() == 0) {
-            Name.requestFocus();
-            Name.setError("Name field cannot be empty!!");
-        } else if (p.length() < 8 && !isValidPassword(p)) {
+            id.requestFocus();
+            id.setError("Id cannot be empty!!");
+        } else   if (p.length() == 0) {
             password.requestFocus();
-            password.setError("Enter Valid Password with atleast 1 capital letter, 1 small letter, 1 number and a symbol");
+            password.setError("Password cannot be empty!!");
         } else {
-            try {
-                Intent toOtherIntent = new Intent(this, SecondActivity.class);
-                startActivity(toOtherIntent);
 
-            } catch (Exception e) {
-            }
+            ParseUser.logInInBackground(user, p, new LogInCallback() {
+                @Override
+                public void done(ParseUser parseUser, ParseException e) {
+
+                    if (parseUser != null) {
+
+                        Toast.makeText(WelcomePage.this, "Welcome back!", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(WelcomePage.this, SecondActivity.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        ParseUser.logOut();
+                        Toast.makeText(WelcomePage.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+
         }
         but2.setOnClickListener(new View.OnClickListener() {
 
