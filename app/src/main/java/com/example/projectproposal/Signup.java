@@ -35,7 +35,7 @@ public class Signup extends AppCompatActivity {
     private EditText d;
     private EditText e;
     private EditText f;
-    private Button BT;
+    private Button signupBTN;
 
 
     @Override
@@ -57,17 +57,17 @@ public class Signup extends AppCompatActivity {
         passwordET = (EditText) findViewById((R.id.passwordET));
         contactET = (EditText) findViewById((R.id.contactET));
         confirmPasswordET = (EditText) findViewById((R.id.confirmPasswordET));
-        BT = (Button)findViewById(R.id.BTN5);
+        signupBTN = (Button)findViewById(R.id.signupBTN);
 
     }
 
     public void gotoSuccessfulSignUpActivityAction(View v) {
         //Fullname Field validation
-        final String fName=fnameET.getText().toString();
-        final String mobNum=contactET.getText().toString();
-        final String user=lnameET.getText().toString();
-        final String p=passwordET.getText().toString();
-        final String Cpass=confirmPasswordET.getText().toString();
+         String fName=fnameET.getText().toString();
+         String mobNum=contactET.getText().toString();
+         String user=lnameET.getText().toString();
+         String p=passwordET.getText().toString();
+         String Cpass=confirmPasswordET.getText().toString();
         if(fName.length()==0){
             fnameET.requestFocus();
             fnameET.setError("Name field cannot be empty!!");
@@ -107,7 +107,9 @@ public class Signup extends AppCompatActivity {
         }
 
         else {
+            System.out.println(emailET.getText().toString().trim());
             ParseUser userSignup = new ParseUser();
+
             userSignup.setUsername(emailET.getText().toString().trim());
             userSignup.setEmail(emailET.getText().toString().trim());
             userSignup.setPassword(passwordET.getText().toString());
@@ -141,6 +143,7 @@ public class Signup extends AppCompatActivity {
                         });
 
                     } else {
+                        System.out.println(e);
                         ParseUser.logOut();
 
                     }
