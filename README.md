@@ -37,6 +37,20 @@ We use the database to store the values entered by students.
 ## Persists on the app:   
 Username, password, Student Preference
 
+## Database Used: back4App
+- We are using the back4App for storing the list of all universities and their location and type of university.
+- Admin Login is also saved in the database for editing the list of all universities.
+- We have List of Universities, their location, type of University.
+- In the Sign-up page, a new user must be created by filling the signup form .
+- Sign-up page has First name, Last name, Email, Contact, password.
+- We will have to save all these data in database from signup page for logging in of user and then validating it.
+- After a user successfully signs up, that particular user details have to be entered in users table of cloud database.
+- After user logs in, they need to take a survey, and based on the preferences in the survey the list of Universities is displayed accordingly.
+- After selecting the University, we need to apply for the university through Apply button which directs to the university website.
+- The user needs to take the feedback for the site development of Universities.
+- Feedback of the user is also stored in the database.
+- When user done entering all above-mentioned information, then on clicking submit button, it must be entered into database into table University select.
+
 ## Activity Flow Diagram:
 
 ![Hosted image](https://github.com/karthikmuthyala/ANDROID_project/blob/master/hdfc.jpg)
