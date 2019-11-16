@@ -76,6 +76,16 @@ This is the Forgot Password Page where user can set new password with his/her us
 
 ![4](https://user-images.githubusercontent.com/46695115/68986409-bd6a0000-07e4-11ea-8002-a1fd40ef3f3d.PNG)
 
+- Survey Page:
+In this page user can see some questions like Preferred location, State or Private Universities and Climate.
+
+![9](https://user-images.githubusercontent.com/46695115/68986879-8ba76800-07e9-11ea-9762-5d5123138477.PNG)
+
+- List Of Universities Page:
+In this page User can see the list of universities as per the survey he gives.
+
+![5](https://user-images.githubusercontent.com/46695115/68986856-5c90f680-07e9-11ea-889a-4efdd2f87b50.PNG)
+
 - Selected University Page (Northwest Missouri State Univeristy):
 In this page user can see the details of the selected university like Univeristy type, Location, Graduation Rate, Required GRE Score and IELTS score with APPLY button. And these requirements changes from univeristy to university.
 
