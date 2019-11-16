@@ -39,9 +39,23 @@ Username, password, Student Preference
 
 ## Activity Flow Diagram:
 
-- ![Hosted image](https://github.com/karthikmuthyala/ANDROID_project/blob/master/hdfc.jpg)
+![Hosted image](https://github.com/karthikmuthyala/ANDROID_project/blob/master/hdfc.jpg)
 
+- Welcome Page:
 This is an Welcome page of the webiste which shows the options to select Admin Login and Student Login. The user should select one of the option to redirect for the next page.
 
 ![1](https://user-images.githubusercontent.com/46695115/68985642-93610f80-07dd-11ea-8c50-25c27e1d6ce6.PNG)
+
+- Student Login Page:
+This is the Student Login Page which the student need to enter user id and password to login. There is the forgot password option which leads the user to set new password and there is the sign-up option for the new users.
+
+![2](https://user-images.githubusercontent.com/46695115/68985751-82fd6480-07de-11ea-9e7c-384e7121ca7a.PNG)
+
+- Sign-up Page:
+This is the sign-up page where the user need to enter the details like First Name, Last Name, Email, Contact, Password and Confirm Password to register to the website.
+
+![3](https://user-images.githubusercontent.com/46695115/68985829-19318a80-07df-11ea-9149-a0e127d8f48b.PNG)
+
+
+
 
