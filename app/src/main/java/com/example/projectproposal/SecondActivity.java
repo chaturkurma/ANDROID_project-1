@@ -13,6 +13,7 @@ public class SecondActivity extends AppCompatActivity {
     private Button BTN;
     private TextView tit;
     private TextView tv2;
+    private TextView tv3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,7 @@ public class SecondActivity extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.univ1);
         TextView tv1 = (TextView) findViewById(R.id.univ2);
         tv2 = findViewById(R.id.textView8);
+        tv3 = findViewById(R.id.textView10);
         BTN = (Button) findViewById(R.id.BTNnext);
         TextView tit = (TextView)findViewById(R.id.titleUniv);
 
@@ -62,6 +64,19 @@ public class SecondActivity extends AppCompatActivity {
             }
 
         });
+
+        tv3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent ini = new Intent(SecondActivity.this,SixthUniversity.class);
+                startActivity(ini);
+
+            }
+
+        });
+
 
 
 
