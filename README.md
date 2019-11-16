@@ -4,7 +4,7 @@
 
 1) Chatur Kurma
 2) Samrat Adloori
-3) Rajesh
+3) Rajesh Tarigopula
 4) Karthik Reddy Muthyala
 
 # Contributors :
@@ -70,6 +70,12 @@ This is the Student Login Page which the student need to enter user id and passw
 This is the sign-up page where the user need to enter the details like First Name, Last Name, Email, Contact, Password and Confirm Password to register to the website.
 
 ![3](https://user-images.githubusercontent.com/46695115/68986009-c5c03c00-07e0-11ea-98a3-e7b0b9a4a61e.PNG)
+
+-Forgot Password Page:
+This is the Forgot Password Page where user can set new password with his/her user name, set password and confirm password.
+
+![4](https://user-images.githubusercontent.com/46695115/68986409-bd6a0000-07e4-11ea-8002-a1fd40ef3f3d.PNG)
+
 
 
 
