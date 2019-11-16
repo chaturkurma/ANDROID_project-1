@@ -43,7 +43,7 @@ public class adminlogin extends AppCompatActivity {
         }
         else {
             try {
-                Intent toOtherIntent = new Intent(this, SecondActivity.class);
+                Intent toOtherIntent = new Intent(this, AdminUniversityList.class);
                 startActivity(toOtherIntent);
 
             } catch (Exception e) {
