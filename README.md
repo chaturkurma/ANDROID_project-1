@@ -41,6 +41,7 @@ Username, password, Student Preference
 
 ![Hosted image](https://github.com/karthikmuthyala/ANDROID_project/blob/master/hdfc.jpg)
 
+## Layouts of our project:
 - Welcome Page:
 This is an Welcome page of the webiste which shows the options to select Admin Login and Student Login. The user should select one of the option to redirect for the next page.
 
@@ -54,7 +55,8 @@ This is the Student Login Page which the student need to enter user id and passw
 - Sign-up Page:
 This is the sign-up page where the user need to enter the details like First Name, Last Name, Email, Contact, Password and Confirm Password to register to the website.
 
-![3](https://user-images.githubusercontent.com/46695115/68985829-19318a80-07df-11ea-9149-a0e127d8f48b.PNG)
+![3](https://user-images.githubusercontent.com/46695115/68986009-c5c03c00-07e0-11ea-98a3-e7b0b9a4a61e.PNG)
+
 
 
 
