@@ -37,10 +37,25 @@ We use the database to store the values entered by students.
 ## Persists on the app:   
 Username, password, Student Preference
 
+## Database Used: back4App
+  We are using the back4App for storing the list of all universities and their location and type of university.
+- Admin Login is also saved in the database for editing the list of all universities.
+- We have List of Universities, their location, type of University.
+- In the Sign-up page, a new user must be created by filling the signup form .
+- Sign-up page has First name, Last name, Email, Contact, password.
+- We will have to save all these data in database from signup page for logging in of user and then validating it.
+- After a user successfully signs up, that particular user details have to be entered in users table of cloud database.
+- After user logs in, they need to take a survey, and based on the preferences in the survey the list of Universities is displayed accordingly.
+- After selecting the University, we need to apply for the university through Apply button which directs to the university website.
+- The user needs to take the feedback for the site development of Universities.
+- Feedback of the user is also stored in the database.
+- When user done entering all above-mentioned information, then on clicking submit button, it must be entered into database into table University select.
+
 ## Activity Flow Diagram:
 
 ![Hosted image](https://github.com/karthikmuthyala/ANDROID_project/blob/master/hdfc.jpg)
 
+## Layouts of our project:
 - Welcome Page:
 This is an Welcome page of the webiste which shows the options to select Admin Login and Student Login. The user should select one of the option to redirect for the next page.
 
@@ -54,7 +69,8 @@ This is the Student Login Page which the student need to enter user id and passw
 - Sign-up Page:
 This is the sign-up page where the user need to enter the details like First Name, Last Name, Email, Contact, Password and Confirm Password to register to the website.
 
-![3](https://user-images.githubusercontent.com/46695115/68985829-19318a80-07df-11ea-9149-a0e127d8f48b.PNG)
+![3](https://user-images.githubusercontent.com/46695115/68986009-c5c03c00-07e0-11ea-98a3-e7b0b9a4a61e.PNG)
+
 
 
 
