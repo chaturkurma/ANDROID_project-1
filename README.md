@@ -1,4 +1,8 @@
-# App Name: University selector
+# App Name: University Selector
+
+# App Logo:
+
+![Logo](https://user-images.githubusercontent.com/46695115/68987110-0d989080-07ec-11ea-81d3-1e1fc5ec8222.png)
 
 # Authors:
 
