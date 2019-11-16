@@ -61,7 +61,7 @@ public class WelcomePage extends AppCompatActivity {
                     if (parseUser != null) {
 
                         Toast.makeText(WelcomePage.this, "Welcome back!", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(WelcomePage.this, SecondActivity.class);
+                        Intent intent = new Intent(WelcomePage.this, Survey_Page.class);
                         startActivity(intent);
                         finish();
                     } else {
