@@ -38,7 +38,7 @@ We use the database to store the values entered by students.
 Username, password, Student Preference
 
 ## Database Used: back4App
-- We are using the back4App for storing the list of all universities and their location and type of university.
+  We are using the back4App for storing the list of all universities and their location and type of university.
 - Admin Login is also saved in the database for editing the list of all universities.
 - We have List of Universities, their location, type of University.
 - In the Sign-up page, a new user must be created by filling the signup form .
