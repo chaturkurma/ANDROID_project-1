@@ -86,6 +86,11 @@ When we click on Apply button in the selected univeristy it redirects to the uni
 
 ![7](https://user-images.githubusercontent.com/46695115/68986622-b5ab5b00-07e6-11ea-960f-73b2f447700b.PNG)
 
+- Feedback Page:
+There is Feedback page for the users with Feedback and comments sections.
+
+![8](https://user-images.githubusercontent.com/46695115/68986728-d45e2180-07e7-11ea-9186-7a94b5933cbe.PNG)
+
 
 
 
