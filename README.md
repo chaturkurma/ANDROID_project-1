@@ -40,3 +40,8 @@ Username, password, Student Preference
 ## Activity Flow Diagram:
 
 - ![Hosted image](https://github.com/karthikmuthyala/ANDROID_project/blob/master/hdfc.jpg)
+
+This is an Welcome page of the webiste which shows the options to select Admin Login and Student Login. The user should select one of the option to redirect for the next page.
+
+![1](https://user-images.githubusercontent.com/46695115/68985642-93610f80-07dd-11ea-8c50-25c27e1d6ce6.PNG)
+
