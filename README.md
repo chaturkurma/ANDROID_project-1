@@ -63,7 +63,7 @@ Username, password, Student Preference
 - Welcome Page:
 This is an Welcome page of the webiste which shows the options to select Admin Login and Student Login. The user should select one of the option to redirect for the next page.
 
-![1](https://user-images.githubusercontent.com/46695115/68985642-93610f80-07dd-11ea-8c50-25c27e1d6ce6.PNG)
+![1](https://user-images.githubusercontent.com/46695115/68988202-49862280-07f9-11ea-90d9-fb54bd8ecd1e.PNG)
 
 - Student Login Page:
 This is the Student Login Page which the student need to enter user id and password to login. There is the forgot password option which leads the user to set new password and there is the sign-up option for the new users.
@@ -105,9 +105,10 @@ There is Feedback page for the users with Feedback and comments sections.
 
 ![8](https://user-images.githubusercontent.com/46695115/68986728-d45e2180-07e7-11ea-9186-7a94b5933cbe.PNG)
 
+- Admin Page:
+This is the Admin Login Page which the admin need to enter user id and password to login. There is the forgot password option which leads the admin to set new password.
 
-
-
+![10](https://user-images.githubusercontent.com/46695115/68988246-c5806a80-07f9-11ea-8b93-06f09b84c369.PNG)
 
 
 
