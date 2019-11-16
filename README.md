@@ -71,10 +71,21 @@ This is the sign-up page where the user need to enter the details like First Nam
 
 ![3](https://user-images.githubusercontent.com/46695115/68986009-c5c03c00-07e0-11ea-98a3-e7b0b9a4a61e.PNG)
 
--Forgot Password Page:
+- Forgot Password Page:
 This is the Forgot Password Page where user can set new password with his/her user name, set password and confirm password.
 
 ![4](https://user-images.githubusercontent.com/46695115/68986409-bd6a0000-07e4-11ea-8002-a1fd40ef3f3d.PNG)
+
+- Selected University Page (Northwest Missouri State Univeristy):
+In this page user can see the details of the selected university like Univeristy type, Location, Graduation Rate, Required GRE Score and IELTS score with APPLY button. And these requirements changes from univeristy to university.
+
+![6](https://user-images.githubusercontent.com/46695115/68986520-c6a79c80-07e5-11ea-90d0-fed6759e904c.PNG)
+
+- Redirected Page (Northwest Missouri State Univeristy):
+When we click on Apply button in the selected univeristy it redirects to the univeristy website where user can apply to that particular university.
+
+![7](https://user-images.githubusercontent.com/46695115/68986622-b5ab5b00-07e6-11ea-960f-73b2f447700b.PNG)
+
 
 
 
