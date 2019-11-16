@@ -105,9 +105,10 @@ There is Feedback page for the users with Feedback and comments sections.
 
 ![8](https://user-images.githubusercontent.com/46695115/68986728-d45e2180-07e7-11ea-9186-7a94b5933cbe.PNG)
 
+- Admin Page:
+This is the Admin Login Page which the admin need to enter user id and password to login. There is the forgot password option which leads the admin to set new password.
 
-
-
+![10](https://user-images.githubusercontent.com/46695115/68988246-c5806a80-07f9-11ea-8b93-06f09b84c369.PNG)
 
 
 
