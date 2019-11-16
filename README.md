@@ -11,7 +11,7 @@
 
 1) Chatur Kurma - Works with funtionality
 2) Samrat Adloori - Works with database connectivity and backend 
-3) Rajesh - Works with User Interface functionality
+3) Rajesh Tarigopula - Works with User Interface functionality
 4) Karthik Reddy Muthyala - works with User Interface FrontEnd
 
 # Project Description :
