@@ -4,61 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
     tools:context=".Survey_questions">
 
     <TextView
         android:id="@+id/Q1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question1"
+        android:text="1. What is your Preferred Location?"
         android:textAlignment="viewStart"
-        android:textColor="#D8215E"
-        android:textSize="30sp"
+        android:textColor="#0925EB"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintVertical_bias="0.164" />
 
     <TextView
         android:id="@+id/Q2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question2"
+        android:text="2. State or Private University?"
         android:textAlignment="viewStart"
-        android:textColor="#D8215E"
-        android:textSize="30sp"
+        android:textColor="#0925EB"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintVertical_bias="0.323" />
 
     <TextView
         android:id="@+id/Q3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question3"
+        android:text="3. Climate?"
         android:textAlignment="viewStart"
-        android:textColor="#D8215E"
-        android:textSize="30sp"
+        android:textColor="#0925EB"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537" />
+        app:layout_constraintVertical_bias="0.536" />
 
     <Button
         android:id="@+id/BTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Next"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.773" />
@@ -69,12 +71,12 @@
         android:layout_height="wrap_content"
         android:text="Survey Page"
         android:textAlignment="viewStart"
-        android:textColor="#41B9AE"
+        android:textColor="#AD0844"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="38dp" />
 
     <EditText
         android:id="@+id/Ans1"
