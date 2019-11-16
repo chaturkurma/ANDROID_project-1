@@ -2,7 +2,7 @@
 
 # App Logo:
 
-![Logo](https://user-images.githubusercontent.com/46695115/68987110-0d989080-07ec-11ea-81d3-1e1fc5ec8222.png)
+![Logo](https://user-images.githubusercontent.com/46695115/68987338-87ca1480-07ee-11ea-9f3d-ddbe418f8b78.png)
 
 # Authors:
 
