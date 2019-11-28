@@ -15,7 +15,7 @@
         android:ems="10"
         android:hint="User-ID"
         android:inputType="textPersonName"
-        android:textColor="#FCF5F5"
+        android:textColor="#F7F7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

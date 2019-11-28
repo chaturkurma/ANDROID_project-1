@@ -87,12 +87,7 @@ public class Signup extends AppCompatActivity {
 //            contact.setError("Mobile Field should contain only numerical values");
 //        }
 
-        //UserId validation
 
-        else if(user.length()==0){
-            lnameET.requestFocus();
-            lnameET.setError("Name field cannot be empty!!");
-        }
 
         //Password validation
         else if(p.length()<8&&!isValidPassword(p)){
