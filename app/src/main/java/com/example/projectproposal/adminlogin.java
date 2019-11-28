@@ -8,12 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class adminlogin extends AppCompatActivity {
-    private EditText Name;
+    private EditText name;
     private EditText password;
     private TextView info;
     private Button B1;
@@ -24,45 +29,50 @@ public class adminlogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminlogin);
-        Name =  findViewById(R.id.name);
+        name =  findViewById(R.id.name);
         password =  findViewById((R.id.Password));
         B1 = findViewById(R.id.BTN6);
-       
+
     }
 
     public void gotoSignInAction(View v) {
-        final String user=Name.getText().toString();
-        final String p=password.getText().toString();
-        if(user.length()==0){
-            Name.requestFocus();
-            Name.setError("Name field cannot be empty!!");
-        }
-        else if(p.length()<8&&!isValidPassword(p)){
+        String user = name.getText().toString();
+        String p = password.getText().toString();
+        if (user.length() == 0) {
+            name.requestFocus();
+            name.setError("Id cannot be empty!!");
+        } else   if (p.length() == 0) {
             password.requestFocus();
-            password.setError("Enter Valid Password with atleast 1 capital letter, 1 small letter, 1 number and a symbol");
-        }
-        else {
-            try {
-                Intent toOtherIntent = new Intent(this, AdminUniversityList.class);
-                startActivity(toOtherIntent);
+            password.setError("Password cannot be empty!!");
+        } else {
 
-            } catch (Exception e) {
-            }
-        }
-        B1.setOnClickListener(new View.OnClickListener() {
+            ParseUser.logInInBackground(user, p, new LogInCallback() {
+                @Override
+                public void done(ParseUser parseUser, ParseException e) {
 
-               @Override
-             public void onClick(View view) {
+                    if (parseUser != null) {
 
-               Intent ini = new Intent(adminlogin.this,ForgotPassword.class);
-             startActivity(ini);
-
-            }
+                        String role = parseUser.getString("role");
+                        System.out.println(role);
+                        if (role.equalsIgnoreCase("admin") ){
+                            Toast.makeText(adminlogin.this, "Welcome back!", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(adminlogin.this, AdminUniversityList.class);
+                            startActivity(intent);
+                            finish();
+                        }else{
+                            Toast.makeText(adminlogin.this, "Invalid login or password", Toast.LENGTH_LONG).show();
+                        }
+                    } else {
+                        ParseUser.logOut();
+                        Toast.makeText(adminlogin.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
             });
 
-
-
         }
+
+    }
+
     public static boolean isValidPassword(final String password) {
 
         Pattern pattern;
@@ -79,5 +89,5 @@ public class adminlogin extends AppCompatActivity {
 
 
 
-    }
+}
 

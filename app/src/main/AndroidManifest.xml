@@ -25,7 +25,7 @@
         <activity android:name=".adminlogin" />
         <activity android:name=".WelcomePage" />
         <activity android:name=".Signup" />
-
+        <activity android:name=".AdminUniversityList" />
         <activity android:name=".feedback" />
         <activity android:name=".Survey_questions" />
         <activity android:name=".Survey_Page" />
