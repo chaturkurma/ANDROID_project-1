@@ -41,6 +41,17 @@ public class WelcomePage extends AppCompatActivity {
         title =findViewById(R.id.Title);
         but1 = findViewById(R.id.New);
         but2 = findViewById(R.id.Fpassword);
+
+        but2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent ini = new Intent(WelcomePage.this, ForgotPassword.class);
+                startActivity(ini);
+
+            }
+        });
     }
 
     public void gotoSignInAction(View v) {
@@ -72,16 +83,7 @@ public class WelcomePage extends AppCompatActivity {
             });
 
         }
-        but2.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-
-                Intent ini = new Intent(WelcomePage.this, ForgotPassword.class);
-                startActivity(ini);
-
-            }
-        });
 
         
 
