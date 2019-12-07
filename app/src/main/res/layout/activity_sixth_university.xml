@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.105" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Private University"
@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.147" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="California"
@@ -77,7 +77,7 @@
         app:layout_constraintVertical_bias="0.186" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="89%"
@@ -117,7 +117,7 @@
         app:layout_constraintVertical_bias="0.272" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/gre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="298"
@@ -129,7 +129,7 @@
         app:layout_constraintVertical_bias="0.227" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tofle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="6.5"

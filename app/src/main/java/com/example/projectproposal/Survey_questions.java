@@ -9,6 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
+import java.util.List;
+
 public class Survey_questions extends AppCompatActivity {
 
     private TextView ques1;
@@ -24,24 +31,30 @@ public class Survey_questions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey_questions);
 
-        TextView ques1 = (TextView) findViewById(R.id.Q1);
-        TextView ques2 = (TextView) findViewById(R.id.Q2);
-        TextView ques3 = (TextView) findViewById(R.id.Q3);
-        EditText ans1 = (EditText) findViewById(R.id.Ans1);
-        EditText ans2 = (EditText) findViewById(R.id.Ans2);
-        EditText ans3 = (EditText) findViewById(R.id.Ans3);
-        submit = (Button) findViewById(R.id.BTN);
+
+        final EditText ans1 = (EditText) findViewById(R.id.Ans1);
+        final EditText ans2 = (EditText) findViewById(R.id.Ans2);
+        final EditText ans3 = (EditText) findViewById(R.id.Ans3);
+        submit = (Button) findViewById(R.id.nextBTN);
 
         submit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
+                String a1 = ans1.getText().toString();
+                String a2 = ans2.getText().toString();
+                String a3 = ans3.getText().toString();
                 Intent ini = new Intent(Survey_questions.this,SecondActivity.class);
+                ini.putExtra("a1", a1);
+                ini.putExtra("a2", a2);
+                ini.putExtra("a3", a3);
                 startActivity(ini);
 
             }
         });
+
+
 
     }
 }

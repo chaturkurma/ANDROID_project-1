@@ -33,11 +33,11 @@ public class SeventhActivity extends AppCompatActivity {
         TextView t4=(TextView) findViewById(R.id.ReqScore);
         TextView t5=(TextView) findViewById(R.id.score2);
         TextView txt=(TextView) findViewById(R.id.textView5);
-        TextView w1=(TextView) findViewById(R.id.textView2);
-        TextView w2=(TextView) findViewById(R.id.textView4);
-        TextView w3=(TextView) findViewById(R.id.textView6);
-        TextView w4=(TextView) findViewById(R.id.textView);
-        TextView w5=(TextView) findViewById(R.id.textView3);
+        TextView w1=(TextView) findViewById(R.id.type);
+        TextView w2=(TextView) findViewById(R.id.location);
+        TextView w3=(TextView) findViewById(R.id.rate);
+        TextView w4=(TextView) findViewById(R.id.gre);
+        TextView w5=(TextView) findViewById(R.id.tofle);
         BTN = (Button)findViewById(R.id.button2);
 
         BTN.setOnClickListener(new View.OnClickListener() {

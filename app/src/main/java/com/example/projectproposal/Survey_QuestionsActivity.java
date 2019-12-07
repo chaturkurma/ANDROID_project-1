@@ -23,7 +23,7 @@ public class Survey_QuestionsActivity extends AppCompatActivity {
         TextView ques1 = (TextView) findViewById(R.id.Q1);
         TextView ques2 = (TextView) findViewById(R.id.Q2);
         TextView ques3 = (TextView) findViewById(R.id.Q3);
-        submit = (Button) findViewById(R.id.BTN);
+        submit = (Button) findViewById(R.id.nextBTN);
 
         submit.setOnClickListener(new View.OnClickListener() {
 
