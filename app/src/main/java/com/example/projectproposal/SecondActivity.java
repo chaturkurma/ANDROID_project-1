@@ -28,27 +28,41 @@ public class SecondActivity extends AppCompatActivity {
     ListView itemGridview;
     ItemAdapter itemAdapter;
     public ArrayList<ItemModel> dataList = new ArrayList();
+    private String qLocation;
+    private String qType;
+    private String qClimate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        TextView tv = (TextView) findViewById(R.id.univ1);
-        TextView tv1 = (TextView) findViewById(R.id.univ2);
-        tv2 = findViewById(R.id.textView8);
-        tv3 = findViewById(R.id.textView10);
-        tv4 = findViewById(R.id.textView11);
+//        TextView tv = (TextView) findViewById(R.id.univ1);
+//        TextView tv1 = (TextView) findViewById(R.id.univ2);
+//        tv2 = findViewById(R.id.textView8);
+//        tv3 = findViewById(R.id.textView10);
+//        tv4 = findViewById(R.id.textView11);
         BTN = (Button) findViewById(R.id.BTNnext);
         TextView tit = (TextView)findViewById(R.id.titleUniv);
         Intent intent = getIntent();
-        String a1 = intent.getStringExtra("a1");
-        String a2 = intent.getStringExtra("a2");
-        String a3 = intent.getStringExtra("a3");
-        System.out.println(a1+a2+a3);
+         qLocation = intent.getStringExtra("a1");
+         qType = intent.getStringExtra("a2");
+         qClimate = intent.getStringExtra("a3");
+        System.out.println(qLocation+qType+qClimate);
         itemGridview = findViewById(R.id.university_list);
         itemAdapter = new ItemAdapter(getApplicationContext(), R.layout.activity_listview, dataList);
 
 
         ParseQuery<ParseObject> query = new ParseQuery<>("university");
+
+        if(!qLocation.equalsIgnoreCase("")){
+            query.whereContains("location", qLocation.toLowerCase());
+        }
+        if(!qClimate.equalsIgnoreCase("")){
+            query.whereContains("climate", qClimate.toLowerCase());
+        }
+        if(!qType.equalsIgnoreCase("")){
+            query.whereContains("type", qType.toLowerCase());
+        }
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
@@ -61,10 +75,34 @@ public class SecondActivity extends AppCompatActivity {
                         final String url = objects.get(i).getString("url");
                         final String location = objects.get(i).getString("location");
                         final String type = objects.get(i).getString("type");
-                        ItemModel itemModel = new ItemModel(title.toUpperCase(), gre, tofle, rate, url, type,location);
-                        dataList.add(itemModel);
-                        itemGridview.setAdapter(itemAdapter);
-                        itemAdapter.notifyDataSetChanged();
+                        boolean match = true;
+//                        if(qLocation.equalsIgnoreCase("")
+//                                && qType.equalsIgnoreCase("")
+//                                && qLocation.equalsIgnoreCase("")){
+//
+//                            ItemModel itemModel = new ItemModel(title.toUpperCase(), gre, tofle, rate, url, type,location);
+//                            dataList.add(itemModel);
+//                            itemGridview.setAdapter(itemAdapter);
+//                            itemAdapter.notifyDataSetChanged();
+//                        }else {
+//                            if((!qClimate.equalsIgnoreCase("") && location.toLowerCase().contains(qClimate.toLowerCase())) ||
+//                                    (!qType.equalsIgnoreCase("") && type.toLowerCase().contains(qType.toLowerCase())) ||
+//                                    (!qLocation.equalsIgnoreCase("") && location.toLowerCase().contains(qLocation.toLowerCase()))
+//
+//                            ){
+//                                ItemModel itemModel = new ItemModel(title.toUpperCase(), gre, tofle, rate, url, type,location);
+//                                dataList.add(itemModel);
+//                                itemGridview.setAdapter(itemAdapter);
+//                                itemAdapter.notifyDataSetChanged();
+//                            }
+//                        }
+
+                                ItemModel itemModel = new ItemModel(title.toUpperCase(), gre, tofle, rate, url, type,location);
+                                dataList.add(itemModel);
+                                itemGridview.setAdapter(itemAdapter);
+                                itemAdapter.notifyDataSetChanged();
+
+
                     }
                 }
             }
@@ -86,7 +124,7 @@ public class SecondActivity extends AppCompatActivity {
                 productIntent.putExtra("tofle", tofle.getText().toString());
                 productIntent.putExtra("rate", rate.getText().toString());
                 productIntent.putExtra("url", url.getText().toString());
-                productIntent.putExtra("loaction", location.getText().toString());
+                productIntent.putExtra("location", location.getText().toString());
                 productIntent.putExtra("type", type.getText().toString());
                 startActivity(productIntent);
             }
