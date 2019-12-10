@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_light_background"
+    android:background="#C9E7EB"
     tools:context=".Survey_questions">
 
     <TextView
@@ -56,6 +56,7 @@
         android:id="@+id/nextBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#7E9C71"
         android:text="Next"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,7 +74,7 @@
         android:layout_marginTop="38dp"
         android:text="Survey Page"
         android:textAlignment="viewStart"
-        android:textColor="#AD0844"
+        android:textColor="#0E0005"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.089"

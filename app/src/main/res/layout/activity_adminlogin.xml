@@ -5,6 +5,7 @@
     android:id="@+id/LOGIN_BTN"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C9E7EB"
     tools:context=".adminlogin">
 
     <EditText
@@ -24,8 +25,9 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="gotoSignInAction"
+        android:background="#7E9C71"
 
+        android:onClick="gotoSignInAction"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Admin Login Page"
+        android:textColor="#0C0303"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,6 +53,7 @@
         android:id="@+id/BTN6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#7E9C71"
         android:onClick="gotoSignInAction"
         android:text="Forgot Password"
         app:layout_constraintBottom_toBottomOf="parent"
