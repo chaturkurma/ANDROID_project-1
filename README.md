@@ -18,6 +18,29 @@
 3) Rajesh Tarigopula - Works with User Interface functionality
 4) Karthik Reddy Muthyala - works with User Interface FrontEnd
 
+# Supported Version:
+
+- This application is supported with minimum sdk version: API 21: Android 5.0(Lollipop) or above
+- Gradle version : 4.10.1
+- Android plugin version: 3.3.1
+
+
+# Installation Steps:
+
+Installation of this app is much more easier with just few steps
+1. The User can download the apk file of the Quiz App.
+2. By clicking on the apk file, It install's the app in your android mobile.
+3. Once the App gets installed the user can click on the App icon to open it.
+4. Later on, the user can register into the app and check the university they want according to preference.
+
+
+# Credentials:
+
+1. First time user must register into the app for free.
+2. The user must login into the app every time they use.
+3. The user can login with the registered gmail and a valid password.
+4. Admin must login to app to add or delete the university.
+
 # Project Description :
 ## Activities:
 

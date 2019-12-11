@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/cardview_light_background"
     android:orientation="vertical"
+
     tools:context=".Survey_questions">
 
     <TextView
@@ -80,6 +81,7 @@
         android:id="@+id/nextBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#7E9C71"
         android:text="Next"
         android:textSize="18sp" />
 
@@ -87,9 +89,22 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:gravity="center"
         android:text="or"
         android:textSize="18sp" />
+=======
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="38dp"
+        android:text="Survey Page"
+        android:textAlignment="viewStart"
+        android:textColor="#0E0005"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> c4452e1690457779eed83631dcc0c1fbe974e553
 
     <Button
         android:id="@+id/skipBTN"
