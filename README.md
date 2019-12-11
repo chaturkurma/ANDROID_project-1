@@ -86,7 +86,7 @@ Username, password, Student Preference
 - Welcome Page:
 This is an Welcome page of the webiste which shows the options to select Admin Login and Student Login. The user should select one of the option to redirect for the next page.
 
-![1](https://user-images.githubusercontent.com/46695115/68988202-49862280-07f9-11ea-90d9-fb54bd8ecd1e.PNG)
+![1](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/home.PNG)
 
 - Student Login Page:
 This is the Student Login Page which the student need to enter user id and password to login. There is the forgot password option which leads the user to set new password and there is the sign-up option for the new users.
