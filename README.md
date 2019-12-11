@@ -144,7 +144,7 @@ This is the Admin Login Page which the admin need to enter user id and password 
 ![10](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/Admin%20login.PNG)
 
 User-Id is km@gmail.com
-password is abcd
+and password is abcd
 
 - Admin university list Page:
 After admin login into the app he will get the view list of all the available university and he can add or delete the university.
