@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
 public class feedback extends AppCompatActivity {
     private Button BTN6;
@@ -30,12 +35,14 @@ public class feedback extends AppCompatActivity {
         EditText E2 = (EditText)findViewById(R.id.editText5);
         B1 = (Button) findViewById(R.id.Back);
 
+
+
         BTN6.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
-                Intent ini = new Intent(feedback.this,WelcomePage.class);
+                Intent ini = new Intent(feedback.this,MainActivity.class);
                 startActivity(ini);
 
             }

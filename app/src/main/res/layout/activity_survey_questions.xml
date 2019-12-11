@@ -89,11 +89,10 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:gravity="center"
         android:text="or"
         android:textSize="18sp" />
-=======
+
         android:layout_marginStart="22dp"
         android:layout_marginTop="38dp"
         android:text="Survey Page"
@@ -104,7 +103,6 @@
         app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
->>>>>>> c4452e1690457779eed83631dcc0c1fbe974e553
 
     <Button
         android:id="@+id/skipBTN"
