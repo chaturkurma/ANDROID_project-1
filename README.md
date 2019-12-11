@@ -91,47 +91,72 @@ This is an Welcome page of the webiste which shows the options to select Admin L
 - Student Login Page:
 This is the Student Login Page which the student need to enter user id and password to login. There is the forgot password option which leads the user to set new password and there is the sign-up option for the new users.
 
-![2](https://user-images.githubusercontent.com/46695115/68985751-82fd6480-07de-11ea-9e7c-384e7121ca7a.PNG)
+![2](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/student%20loginpage.PNG)
 
 - Sign-up Page:
 This is the sign-up page where the user need to enter the details like First Name, Last Name, Email, Contact, Password and Confirm Password to register to the website.
 
-![3](https://user-images.githubusercontent.com/46695115/68986009-c5c03c00-07e0-11ea-98a3-e7b0b9a4a61e.PNG)
+![3](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/signup.PNG)
 
 - Forgot Password Page:
 This is the Forgot Password Page where user can set new password with his/her user name, set password and confirm password.
 
-![4](https://user-images.githubusercontent.com/46695115/68986409-bd6a0000-07e4-11ea-8002-a1fd40ef3f3d.PNG)
+![4](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/forgot%20password.PNG)
 
 - Survey Page:
 In this page user can see some questions like Preferred location, State or Private Universities and Climate.
 
-![9](https://user-images.githubusercontent.com/46695115/68986879-8ba76800-07e9-11ea-9762-5d5123138477.PNG)
+![9](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/survey.PNG)
 
 - List Of Universities Page:
 In this page User can see the list of universities as per the survey he gives.
 
-![5](https://user-images.githubusercontent.com/46695115/68986856-5c90f680-07e9-11ea-889a-4efdd2f87b50.PNG)
+![5](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/universitylist.PNG)
 
-- Selected University Page (Northwest Missouri State Univeristy):
+- Selected University Page :
 In this page user can see the details of the selected university like Univeristy type, Location, Graduation Rate, Required GRE Score and IELTS score with APPLY button. And these requirements changes from univeristy to university.
 
-![6](https://user-images.githubusercontent.com/46695115/68986520-c6a79c80-07e5-11ea-90d0-fed6759e904c.PNG)
+![6](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/university%20select.PNG)
 
-- Redirected Page (Northwest Missouri State Univeristy):
+- Redirected Page :
 When we click on Apply button in the selected univeristy it redirects to the univeristy website where user can apply to that particular university.
 
-![7](https://user-images.githubusercontent.com/46695115/68986622-b5ab5b00-07e6-11ea-960f-73b2f447700b.PNG)
+![7](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/apply.PNG)
+
+- Website Page :
+When we click on Go TO COLLEGE WEBSITE button in the selected univeristy it redirects to the univeristy website where user can know about that particular university.
+
+![12](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/collegesite.PNG)
+
+- Maps Location Page :
+When we click on View in maps button in the selected univeristy it redirects to the univeristy google maps where user can see the location of that particular university.
+
+![13](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/maps.PNG)
 
 - Feedback Page:
 There is Feedback page for the users with Feedback and comments sections.
 
-![8](https://user-images.githubusercontent.com/46695115/68986728-d45e2180-07e7-11ea-9186-7a94b5933cbe.PNG)
+![8](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/feedback.PNG)
 
 - Admin Page:
 This is the Admin Login Page which the admin need to enter user id and password to login. There is the forgot password option which leads the admin to set new password.
 
-![10](https://user-images.githubusercontent.com/46695115/68988246-c5806a80-07f9-11ea-8b93-06f09b84c369.PNG)
+![10](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/Admin%20login.PNG)
+
+User-Id is km@gmail.com
+password is abcd
+
+- Admin university list Page:
+After admin login into the app he will get the view list of all the available university and he can add or delete the university.
+
+![14](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/list.PNG)
+
+- Admin add university Page:
+After clicking the add button the admin will be directed to the add university page where he should fill the university name, climate, graduation rate, type and link.
+
+![15](https://github.com/karthikmuthyala/ANDROID_project/blob/master/screenshots/adduniversity.PNG)
+
+
 
 
 
