@@ -31,6 +31,7 @@ public class SecondActivity extends AppCompatActivity {
     private String qLocation;
     private String qType;
     private String qClimate;
+    public String locationString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +43,18 @@ public class SecondActivity extends AppCompatActivity {
 //        tv3 = findViewById(R.id.textView10);
 //        tv4 = findViewById(R.id.textView11);
         BTN = (Button) findViewById(R.id.BTNnext);
+        qLocation="";
         TextView tit = (TextView)findViewById(R.id.titleUniv);
         Intent intent = getIntent();
+        if(intent.hasExtra("a1")){
          qLocation = intent.getStringExtra("a1");
          qType = intent.getStringExtra("a2");
          qClimate = intent.getStringExtra("a3");
-        System.out.println(qLocation+qType+qClimate);
+        System.out.println(qLocation+qType+qClimate);}else {
+            qLocation="";
+            qType="";
+            qClimate="";
+        }
         itemGridview = findViewById(R.id.university_list);
         itemAdapter = new ItemAdapter(getApplicationContext(), R.layout.activity_listview, dataList);
 
@@ -75,6 +82,7 @@ public class SecondActivity extends AppCompatActivity {
                         final String url = objects.get(i).getString("url");
                         final String location = objects.get(i).getString("location");
                         final String type = objects.get(i).getString("type");
+                        final String locationString = objects.get(i).getString("locationString");
                         boolean match = true;
 //                        if(qLocation.equalsIgnoreCase("")
 //                                && qType.equalsIgnoreCase("")
@@ -97,7 +105,7 @@ public class SecondActivity extends AppCompatActivity {
 //                            }
 //                        }
 
-                                ItemModel itemModel = new ItemModel(title.toUpperCase(), gre, tofle, rate, url, type,location);
+                                ItemModel itemModel = new ItemModel(title.toUpperCase(), gre, tofle, rate, url, type,location,locationString);
                                 dataList.add(itemModel);
                                 itemGridview.setAdapter(itemAdapter);
                                 itemAdapter.notifyDataSetChanged();
@@ -126,6 +134,7 @@ public class SecondActivity extends AppCompatActivity {
                 productIntent.putExtra("url", url.getText().toString());
                 productIntent.putExtra("location", location.getText().toString());
                 productIntent.putExtra("type", type.getText().toString());
+                productIntent.putExtra("locationString",dataList.get(position).getLocationString());
                 startActivity(productIntent);
             }
         });

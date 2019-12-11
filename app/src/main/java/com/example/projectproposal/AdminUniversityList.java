@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdminUniversityList extends AppCompatActivity {
-    private Button BTN;
+    private Button viewRequestBtn;
     private Button BTN1;
     private TextView tit;
     ListView itemGridview;
@@ -30,6 +30,7 @@ public class AdminUniversityList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_university_list);
         Button addBtn = findViewById(R.id.addBtn);
+        viewRequestBtn = findViewById(R.id.viewRequestBtn);
         itemGridview = findViewById(R.id.university_list_admin);
         itemAdapter = new ItemAdapterAdmin(getApplicationContext(), R.layout.activity_listview_admin, dataList);
 
@@ -41,6 +42,13 @@ public class AdminUniversityList extends AppCompatActivity {
                 Intent ini = new Intent(AdminUniversityList.this, AddUniversity.class);
                 startActivity(ini);
 
+
+            }
+        });
+
+        viewRequestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
             }
         });
@@ -65,6 +73,7 @@ public class AdminUniversityList extends AppCompatActivity {
                 }
             }
         });
+
 
 
     }

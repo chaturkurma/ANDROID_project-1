@@ -1,134 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_light_background"
+    android:orientation="vertical"
     tools:context=".Survey_questions">
 
     <TextView
-        android:id="@+id/Q1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1. What is your Preferred Location?"
-        android:textAlignment="viewStart"
-        android:textColor="#0925EB"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
-
-    <TextView
-        android:id="@+id/Q2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2. State or Private University?"
-        android:textAlignment="viewStart"
-        android:textColor="#0925EB"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.217"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.323" />
-
-    <TextView
-        android:id="@+id/Q3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3. Climate?"
-        android:textAlignment="viewStart"
-        android:textColor="#0925EB"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
-
-    <Button
-        android:id="@+id/nextBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.773" />
-
-    <TextView
         android:id="@+id/Surveypage"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginTop="38dp"
         android:text="Survey Page"
         android:textAlignment="viewStart"
         android:textColor="#AD0844"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/Q1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. What is your Preferred Location?"
+        android:textAlignment="viewStart"
+        android:textColor="#0925EB"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/Ans1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Answer"
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="#6226CC"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.234" />
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/Q2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. State or Private University?"
+        android:textAlignment="viewStart"
+        android:textColor="#0925EB"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/Ans2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Answer"
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="#6226CC"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.698"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.399" />
+        android:textSize="30sp" />
 
-    <EditText
-        android:id="@+id/Ans3"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/Q3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Answer"
-        android:inputType="textPersonName"
+        android:text="3. Climate?"
         android:textAlignment="viewStart"
-        android:textColor="#6226CC"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
+        android:textColor="#0925EB"
+        android:textSize="24sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Spinner
+        android:id="@+id/climateDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minWidth="30dp"
+        android:scrollbarSize="18dp"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:id="@+id/nextBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="or"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/skipBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Skip" />
+
+</LinearLayout>

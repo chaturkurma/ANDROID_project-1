@@ -22,6 +22,8 @@ public class ThirdActivity extends AppCompatActivity {
     private TextView w4;
     private TextView w5;
     private Button BTN;
+    private Button applyBtn;
+    private Button view;
     String url;
 
     @Override
@@ -39,14 +41,19 @@ public class ThirdActivity extends AppCompatActivity {
         TextView rateTv=(TextView) findViewById(R.id.rate);
         TextView greTv=(TextView) findViewById(R.id.gre);
         TextView tofleTv=(TextView) findViewById(R.id.tofle);
+        applyBtn = findViewById(R.id.applyBtn);
+        view = findViewById(R.id.button3);
+
+
         BTN = (Button)findViewById(R.id.button2);
         Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
+        final String name = intent.getStringExtra("name");
         String gre = intent.getStringExtra("gre");
         String rate = intent.getStringExtra("rate");
         String tofle = intent.getStringExtra("tofle");
         String type = intent.getStringExtra("type");
         String location = intent.getStringExtra("location");
+        final String locationString = intent.getStringExtra("locationString");
          url = intent.getStringExtra("url");
         nameTv.setText(name);
         greTv.setText(gre);
@@ -62,6 +69,30 @@ public class ThirdActivity extends AppCompatActivity {
 
                 Intent ini = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(ini);
+
+            }
+        });
+
+
+        applyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ini = new Intent(ThirdActivity.this, SendRequestActivity.class);
+                startActivity(ini);
+            }
+        });
+
+        view.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q="+name);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+
+
 
             }
         });

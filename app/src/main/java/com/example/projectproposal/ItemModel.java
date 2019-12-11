@@ -14,8 +14,9 @@ public class ItemModel implements Serializable {
     String url;
     String type;
     String location;
+    String locationString;
 
-    public ItemModel(String name, String gre, String rate, String tofle, String url, String type, String location) {
+    public ItemModel(String name, String gre, String rate, String tofle, String url, String type, String location, String locationString) {
         this.name = name;
         this.gre = gre;
         this.rate = rate;
@@ -23,6 +24,7 @@ public class ItemModel implements Serializable {
         this.url = url;
         this.type = type;
         this.location = location;
+        this.locationString = locationString;
     }
 
     public String getType() {
@@ -37,8 +39,16 @@ public class ItemModel implements Serializable {
         return location;
     }
 
+    public String getLocationString() {
+        return locationString;
+    }
+
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public void setLocationString(String locationString) {
+        this.locationString = locationString;
     }
 
     public String getGre() {
